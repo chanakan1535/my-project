@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าล็อคอิน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<body>
+    <form action="./staff-info/index.html">
+        <div class="main">
+            <div class="content-login">
+                <div class="round">
+                    <div class="ic-login">
+                        <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <div class="title">
+                    Company Time<br>Management System
+                </div>
+                <div>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" placeholder="Password">
+                </div>
+            </div>
+            <button class="button" input type="submit" value="Login">Login</button>
+        </div>
+    </form>
+</body>
+</html>
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display:flex;
+    justify-content: center;
+    background-color: rgba(116, 189, 242, 0.31);
+    height: 1024px;
+    width: 100%;   
+    flex-direction:column;
+    align-items: center; 
+}   
+.content-login{
+    display:flex; 
+    justify-content: flex-start; 
+    width: 670px; 
+    height: 366px;
+    background-color: rgba(251, 251, 251, 0.3);
+    border-radius: 8px;
+    flex-direction:column;
+    align-items: center; 
+}
+.button{
+    background-color:rgba(251, 251, 251, 0.3);
+    border: none;
+    color: #2971A5;
+    width: 387px;
+    height: 66px;
+    margin-top: 20px;
+    border-radius: 0px 0px 8px 8px;
+    font-weight: bold;
+    cursor: pointer;  
+}
+.round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 152px;
+    background-color: #0d3f60;
+    border-radius: 50%;
+}
+.title{
+    font-weight: bold;
+    color: #144568;
+    /* margin-top: 20; */
+    /* margin: 11px auto; */
+    padding-top: 20;
+}
+
+/* .user{
+  /* color: #FFFFFF; 
+ width: 402px;
+ height: 57px;
+ margin-top: 20px;
+ font-weight:normal;
+ background-color:rgba(20, 69, 104, 0.6);
+ text-align:left; */  
+ 
+input[type=text] {
+    color: #fffdfd; 
+    width: 402px;
+    height: 57px;
+    margin-top: 20px;
+    font-weight:normal;
+    background-color:rgba(20, 69, 104, 0.6);
+    text-align:left;
+    border: 0px;
+}
+
+/* .code{
+ color: #FFFFFF;
+ width: 402px;
+ height: 57px;
+ margin-top: 20px;
+ font-weight: normal;
+ background-color:rgba(20, 69, 104, 0.6);
+ text-align:left;
+} */
+
+input[type=password]{
+    color: #fffdfd; 
+    width: 402px;
+    height: 57px;
+    margin-top: 20px;
+    font-weight:normal;
+    background-color:rgba(20, 69, 104, 0.6);
+    text-align:left;
+    border: 0px;
+}
+::placeholder{
+    font-weight:normal;
+    color:#fffdfd
+}
+</style>
