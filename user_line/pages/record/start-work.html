@@ -15,7 +15,7 @@
 <body>
     <div class="recoed-time-for-work">
         <div class="second-menu">
-            <div>
+            <div class="head-bar">
                 <div class="company">
                     Company Time
                 </div>
@@ -27,13 +27,17 @@
                 <div class="icon">
                     <i class="fa-regular fa-user"></i>
                 </div>
-                <div class="small-round">
+                <div class="small-round" onclick="mydropdownshow()">
                     <div class="dropdown">
                         <div class="icon-dropdown">
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="dropdown-content">
-                            <a href="../login/index.html">ออกจากระบบ</a>
+                        <div class="w3-dropdown-click">
+                            <div class="w3-button w3-black">
+                            </div>
+                            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+                                <a href="../login/index.html" class="w3-bar-item w3-button">ออกจากระบบ </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,6 +137,14 @@
                 modal.style.display = "none";
             }
         }
+        function mydropdownshow() {
+                var x = document.getElementById("Demo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
     </script>
 </body>
 

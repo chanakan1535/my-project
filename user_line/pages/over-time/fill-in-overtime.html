@@ -13,132 +13,161 @@
 <body>
     <div class="fill-in-overtime">
         <div class="second-menu">
-            <div>
+            <div class="head-bar">
                 <div class="company">
                     Company Time
                 </div>
                 <div class="management">
-                    management System
+                    Management System
                 </div>
             </div>
             <div class="round">
                 <div class="icon">
                     <i class="fa-regular fa-user"></i>
                 </div>
-                <div class="small-round">
+                <div class="small-round" onclick="mydropdownshow()">
                     <div class="dropdown">
                         <div class="icon-dropdown">
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="dropdown-content">
-                            <a href="../login/index.html">ออกจากระบบ</a>
+                        <div class="w3-dropdown-click">
+                            <div class="w3-button w3-black">
+                            </div>
+                            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+                                <a href="../login/index.html" class="w3-bar-item w3-button">ออกจากระบบ </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div>
-            <div class="content-fill-overtime">
-                <div class="name">
-                    กรอกการทำงานล่วงเวลา
+            <form id="myForm">
+                <div class="content-fill-overtime">
+                    <div class="name">
+                        กรอกการทำงานล่วงเวลา
+                    </div>
+                    <div class="data-edit-password">
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                วันที่เริ่มทำงาน
+                            </label>
+                            <input class="start fill-overtime" placeholder="วันที่เริ่มทำงาน" type="text"  onfocus="(this.type = 'date')"
+                                id="date" required>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                เวลาที่เริ่มทำงาน
+                            </label>
+                            <input class="start fill-overtime" type="time" name="new-password" placeholder="เวลาที่เริ่มทำงาน" required>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                วันที่เลิกทำงาน
+                            </label>
+                            <input class="start fill-overtime" placeholder="วันที่เลิกทำงาน" type="text" onfocus="(this.type = 'date')"
+                                id="date" required>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                เวลาที่สิ้นสุดการทำงาน
+                            </label>
+                            <input class="start fill-overtime" placeholder="เวลาที่สิ้นสุดการทำงาน" type="time"
+                                onfocus="(this.type = 'date')" id="date" required>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                สถานะวัน
+                            </label>
+                            <select class="classic">
+                                <option>วันหยุดปกติ</option>
+                                <option>วันหยุด</option>
+                                <option>วันหยุดนขัตฤกษ์</option>
+                            </select>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                โปรเจ็ค
+                            </label>
+                            <input class="start fill-overtime" type="text" name="new-password" placeholder="โปรเจ็ค" required>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                รายละเอียดงาน
+                            </label>
+                            <input class="start fill-overtime" type="text" name="new-password" placeholder="รายละเอียดงาน" required>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                เวลาที่สิ้นสุดการทำงาน
+                            </label>
+                            <input class="start fill-overtime" type="time" name="hours" placeholder="ชั่วโมง" required>
+                        </div>
+                        <div class="form-staff">
+                            <label class="section">
+                                <span>
+                                    *
+                                </span>
+                                ชั่วโมง
+                            </label>
+                            <input class="start fill-overtime" type="time" name="minutes" placeholder="ชั่วโมง" required>
+                        </div>
+                    </div>
+                    <div class="submit-fill">
+                        <button  id="submitBtn" class="confirm">ยืนยัน</button>
+                    </div>
                 </div>
-                <div class="data-edit-password">
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            วันที่เริ่มทำงาน
-                        </label>
-                        <input class="start fill-overtime" placeholder="วันที่เริ่มทำงาน" type="text" onfocus="(this.type = 'date')"
-                            id="date" required>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            เวลาที่เริ่มทำงาน
-                        </label>
-                        <input class="start fill-overtime" type="time" name="new-password" placeholder="เวลาที่เริ่มทำงาน" required>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            วันที่เลิกทำงาน
-                        </label>
-                        <input class="start fill-overtime" placeholder="วันที่เลิกทำงาน" type="text" onfocus="(this.type = 'date')"
-                            id="date" required>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            เวลาที่สิ้นสุดการทำงาน
-                        </label>
-                        <input class="start fill-overtime" placeholder="เวลาที่สิ้นสุดการทำงาน" type="time"
-                            onfocus="(this.type = 'date')" id="date" required>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            สถานะวัน
-                        </label>
-                        <select class="classic">
-                            <option>วันหยุดปกติ</option>
-                            <option>วันหยุด</option>
-                            <option>วันหยุดนขัตฤกษ์</option>
-                        </select>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            โปรเจ็ค
-                        </label>
-                        <input class="start fill-overtime" type="text" name="new-password" placeholder="โปรเจ็ค" required>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            รายละเอียดงาน
-                        </label>
-                        <input class="start fill-overtime" type="text" name="new-password" placeholder="รายละเอียดงาน" required>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            เวลาที่สิ้นสุดการทำงาน
-                        </label>
-                        <input class="start fill-overtime" type="time" name="hours" placeholder="ชั่วโมง" required>
-                    </div>
-                    <div class="form-staff">
-                        <label class="section">
-                            <span>
-                                *
-                            </span>
-                            นาที
-                        </label>
-                        <input class="start fill-overtime" type="time" name="minutes" placeholder="นาที" required>
-                    </div>
-                </div>
-                <div class="submit-fill">
-                    <a class="button-submit" href="./details.html">
-                        <button class="confirm" input type="submit" value="ยืนยัน">ยืนยัน</button>
-                    </a>
-                </div>
-            </div>
+            </form>
+                
         </div>
     </div>
+    <script>
+        function mydropdownshow() {
+                var x = document.getElementById("Demo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            // รับอ้างอิงไปยังแบบฟอร์มและปุ่มยืนยัน
+                const form = document.getElementById("myForm");
+                const submitBtn = document.getElementById("submitBtn");
+
+                // เพิ่มเหตุการณ์ (event) เมื่อปุ่มถูกคลิก
+                submitBtn.addEventListener("click", function (event) {
+                    // ป้องกันการส่งแบบฟอร์มโดยปกติ
+                    event.preventDefault();
+
+                    // นำทางไปยังหน้า "details"
+                    window.location.href = "./details.html"; // แก้ไข URL ตามที่คุณต้องการ
+                });
+
+          
+    </script>
 </body>
 </html>
