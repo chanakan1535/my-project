@@ -42,27 +42,27 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
     // });
 
     // ฟังก์ชันในส่วนการ login
-    login.addEventListener('click', (e) => {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+    // login.addEventListener('click', (e) => {
+    //     var email = document.getElementById('email').value;
+    //     var password = document.getElementById('password').value;
         
-            signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                // ...
+    //         signInWithEmailAndPassword(auth, email, password)
+    //             .then((userCredential) => {
+    //             // Signed in 
+    //             const user = userCredential.user;
+    //             // ...
 
-                // update user login details in realtime database อัปเดตรายละเอียดการเข้าสู่ระบบของผู้ใช้ในฐานข้อมูลเรียลไทม์
+    //             // update user login details in realtime database อัปเดตรายละเอียดการเข้าสู่ระบบของผู้ใช้ในฐานข้อมูลเรียลไทม์
                 
-                    set(ref(database, 'users/' + user.uid), {
-                        email: email
-                    });
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            });
-    });
+    //                 set(ref(database, 'users/' + user.uid), {
+    //                     email: email
+    //                 });
+    //         })
+    //         .catch((error) => {
+    //             const errorCode = error.code;
+    //             const errorMessage = error.message;
+    //         });
+    // });
 
 // ฟังก์ชันในส่วนการ logout
     const user = auth.currentUser;
