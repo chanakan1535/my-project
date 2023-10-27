@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>หน้าล็อคอิน</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
-    <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
     
 </head>
 
@@ -19,22 +19,63 @@
             <div class="content-login">
                 <div class="round">
                     <div class="ic-login">
-                        <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                        <i class="fa-solid fa-user"></i>
                     </div>
                 </div>
-                <div class="title">
-                    Company Time<br>Management System
+                <div>
+                    <div class="company">
+                        Company Time
+                    </div>
+                    <div class="management">
+                        Management System
+                    </div>
                 </div>
                 <div>
-                    <input type="text" placeholder="Username">
+                    <input class="message-login" type="text" placeholder="Username" >
                 </div>
                 <div>
-                    <input type="password" placeholder="Password">
+                    <div class="section-turn">
+                        <input type="password" id="message-password" placeholder="password">
+                        <img class="turn-off" src="../assets/icons/ic-turn off.png" onclick="myFunction()">
+                        <img class="turn-on" src="../assets/icons/Group-showpassword.png" style="display: none;" onclick="show()">
+                    </div>
                 </div>
             </div>
-            <button class="button" input type="submit" value="Login">Login</button>
+            <button class="button" onclick="myFunction()">
+                <div class="submit-login">
+                    Login
+                </div>
+            </button>
         </div>
     </form>
+    <script>
+        function myFunction() {
+                var x = document.getElementById("password");
+                var y = document.getElementsByClassName("turn-off");
+                y[0].style.display = "none";
+                var z = document.getElementsByClassName("turn-on");
+                z[0].style.display = "block";
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+
+                }
+            }
+        function show() {
+                console.log(y)
+                var x = document.getElementById("password");
+                var z = document.getElementsByClassName("turn-on");
+                z[0].style.display = "none";
+                var y = document.getElementsByClassName("turn-off");
+                y[0].style.display = "block";
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+    </script>
 </body>
 </html>
 <style>
@@ -42,13 +83,13 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Sarabun', sans-serif;
 }
 .main {
     display:flex;
     justify-content: center;
     background-color: rgba(116, 189, 242, 0.31);
-    height: 1024px;
-    width: 100%;   
+    height: 100vh;
     flex-direction:column;
     align-items: center; 
 }   
@@ -63,15 +104,21 @@ body{
     align-items: center; 
 }
 .button{
-    background-color:rgba(251, 251, 251, 0.3);
     border: none;
-    color: #2971A5;
+    cursor: pointer;
     width: 387px;
     height: 66px;
     margin-top: 20px;
     border-radius: 0px 0px 8px 8px;
+    background-color:rgba(251, 251, 251, 0.3);
+}
+.submit-login{
+    color: #2971A5;
     font-weight: bold;
-    cursor: pointer;  
+    font-size: 16px;
+}
+button:hover{
+    background-color: #fcfeff;
 }
 .round {
     display: flex;
@@ -82,56 +129,73 @@ body{
     background-color: #0d3f60;
     border-radius: 50%;
 }
-.title{
-    font-weight: bold;
+.ic-login{
+    color: #ffffff;
+    width: 64px;
+    height: 64px;
+}
+.company {
     color: #144568;
-    /* margin-top: 20; */
-    /* margin: 11px auto; */
-    padding-top: 20;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 16px;
 }
-
-/* .user{
-  /* color: #FFFFFF; 
- width: 402px;
- height: 57px;
- margin-top: 20px;
- font-weight:normal;
- background-color:rgba(20, 69, 104, 0.6);
- text-align:left; */  
- 
+.management {
+    color: #144568;
+    font-weight: bold;
+    font-size: 16px;
+}
 input[type=text] {
-    color: #fffdfd; 
+     
     width: 402px;
     height: 57px;
+    padding: 0px 16px;
     margin-top: 20px;
-    font-weight:normal;
-    background-color:rgba(20, 69, 104, 0.6);
-    text-align:left;
     border: 0px;
+    outline: none;
+    border-radius: 6px;
+    background-color:rgba(20, 69, 104, 0.6);
 }
-
-/* .code{
- color: #FFFFFF;
- width: 402px;
- height: 57px;
- margin-top: 20px;
- font-weight: normal;
- background-color:rgba(20, 69, 104, 0.6);
- text-align:left;
+/* input[type=text]:focus {
+    border-color: rgba(20, 69, 104, 0.6);
 } */
-
+.message-login{
+    font-size: 14px;
+    color: #fffdfd;
+}
 input[type=password]{
-    color: #fffdfd; 
     width: 402px;
     height: 57px;
-    margin-top: 20px;
-    font-weight:normal;
-    background-color:rgba(20, 69, 104, 0.6);
-    text-align:left;
     border: 0px;
+    outline: none;
+    padding: 0px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    background-color:rgba(20, 69, 104, 0.6);
+}
+#message-password{
+    font-size: 14px;
+    color: #fffdfd;
 }
 ::placeholder{
-    font-weight:normal;
     color:#fffdfd
+}
+.section-turn{
+    position: relative;
+    cursor: pointer;
+}
+.turn-off{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    top: 40px;
+}
+.turn-on{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    top: 40px;
 }
 </style>
