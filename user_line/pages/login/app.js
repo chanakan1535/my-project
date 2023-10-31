@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+import {getFirestore, collection, getDocs  } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
 import { getStorage, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-storage.js";
 import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
@@ -13,14 +14,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 };
 
     const app = initializeApp(firebaseConfig);
-console.log(app)
-const db = getDatabase();
-console.log(db,"this")
+    const db = getFirestore(app);
     const database = getDatabase(app);
-const auth = getAuth();
-
+    const auth = getAuth();
     const storage = getStorage(app);
-console.log(storage,"oiuyrtdfjhf")
+const datalogin = document.getElementById(datalogin);
+    console.log(datalogin,"pp")
     // ฟังก์ชันในการสร้างบัญชีผู้ใช้
     // signUp.addEventListener('click', (e) => {
     //     var email = document.getElementById('email').value;
@@ -121,8 +120,22 @@ console.log(storage,"oiuyrtdfjhf")
     //         const errorCode = error.code;
     //         const errorMessage = error.message;
     //     });
-    // });
+// });
+async function getprofile(db) {
+    const pfcol = collection(db, 'profile')
+    const pfSnapshot = await getDocs(pfcol)
+    return pfSnapshot
+}
+function showData(profile) {
+    
+}
 
+//ดีงกลุ่ม document เก็บไว้ในตัวแปล data
+const data = await getprofile(db)
+console.log(data, "is")
+data.forEach(profile => {
+    showData(profile)
+})
 
 
 

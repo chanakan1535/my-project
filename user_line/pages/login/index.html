@@ -27,13 +27,15 @@
             <div class="name">
                 กรุณากรอก Username&Password
             </div>
-                <div>
+            <form>
+                <div id="datalogin">
                     <div class="fill-info">
                         <input class="message" type="text" id="email" name="employeename" placeholder="email" required>
                         <div class="section-turn">
                             <input type="password" id="password" placeholder="password" required>
                             <img class="turn-off" src="../../assets/icons/ic-turn off.png" onclick="myFunction()">
-                            <img class="turn-on" src="../../assets/icons/Group-showpassword.png" style="display: none;" onclick="show()">
+                            <img class="turn-on" src="../../assets/icons/Group-showpassword.png" style="display: none;"
+                                onclick="show()">
                         </div>
                     </div>
                     <div class="chack-password">
@@ -53,10 +55,11 @@
                         </div>
                     </button>
                 </div>
+            </form>
+                
            
         </div>
     </div>
-    <img src="" alt="" id="myimg">
     <script >
         function myFunction() {
             var x = document.getElementById("password");
@@ -91,9 +94,9 @@
             const urlParams = new URLSearchParams(queryString);
             const page = urlParams.get('page')
             if (page === 'over-time') {
-                // window.location.href = '/user_line/pages/over-time/fill-in-overtime.html';
+                window.location.href = '/user_line/pages/over-time/fill-in-overtime.html';
             } else {
-                // window.location.href = '/user_line/pages/record/record-time-for-work.html';
+                window.location.href = '/user_line/pages/record/record-time-for-work.html';
             }
             // console.log(page);
         }
