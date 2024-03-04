@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข้อมูลพนักงาน</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../style/index.css">
-    
+
 </head>
+
 <body>
     <div class="staff-info-list">
         <div class="bar">
@@ -31,7 +29,7 @@
                 <div class="dropdown">
                     <div class="ic-dropdown">
                         <i class="fa-solid fa-chevron-down"></i>
-                    </div> 
+                    </div>
                     <div class="dropdown-content">
                         <a href="../edit-password-admin.html">เปลี่ยนรหัสผ่าน</a>
                         <a href="../index.html">ออกจากระบบ</a>
@@ -74,12 +72,14 @@
                             <th>ลำดับ</th>
                             <th>ชื่อ-สกุล</th>
                             <th>(วันเกิด) วัน/เดือน/ปี</th>
+                            <th>ที่อยู่</th>
                             <th></th>
                         </tr>
                         <tr>
-                            <td>1</td>
+                            <td>0</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -87,12 +87,17 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                                    <a id="myBtn">
-                                        <div  class="icon-trash">
+                                    <a onclick="myFunction()">
+                                        <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
                                     </a>
-                                        
+                                    <!-- <a id="myBtn">
+                                        <div class="icon-trash">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </a> -->
+
                                 </div>
                             </td>
                         </tr>
@@ -100,6 +105,7 @@
                             <td>1</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -107,13 +113,24 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                        
-                                    <a href="#">
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
                                     </a>
-                        
+                                    <!-- <a id="myBtn">
+                                        <div class="icon-trash">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </a> -->
+                                    <!-- <a>
+                                    <button onclick="myFunction()">
+                                        <div class="icon-trash">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </button>
+                                    </a> -->
+
                                 </div>
                             </td>
                         </tr>
@@ -121,6 +138,7 @@
                             <td>2</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -128,13 +146,12 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                        
-                                    <a href="#">
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
                                     </a>
-                        
+
                                 </div>
                             </td>
                         </tr>
@@ -142,6 +159,7 @@
                             <td>3</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -149,13 +167,13 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                        
-                                    <a href="#">
+
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
                                     </a>
-                        
+
                                 </div>
                             </td>
                         </tr>
@@ -163,6 +181,7 @@
                             <td>4</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -170,13 +189,13 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                        
-                                    <a href="#">
+
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
                                     </a>
-                        
+
                                 </div>
                             </td>
                         </tr>
@@ -184,6 +203,7 @@
                             <td>5</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -191,13 +211,13 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                        
-                                    <a href="#">
+
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
                                     </a>
-                        
+
                                 </div>
                             </td>
                         </tr>
@@ -205,6 +225,7 @@
                             <td>6</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -212,13 +233,13 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                        
-                                    <a href="#">
+
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
                                     </a>
-                        
+
                                 </div>
                             </td>
                         </tr>
@@ -226,6 +247,7 @@
                             <td>7</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -233,8 +255,8 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                        
-                                    <a href="#">
+
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
@@ -246,6 +268,7 @@
                             <td>8</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -253,7 +276,7 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                                    <a href="#">
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
@@ -265,6 +288,7 @@
                             <td>9</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -272,7 +296,7 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                                    <a href="#">
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
@@ -284,6 +308,7 @@
                             <td>10</td>
                             <td>กล้วยหอม จอมซน</td>
                             <td>15 ธ.ค.2022</td>
+                            <td></td>
                             <td>
                                 <div class="icon">
                                     <a href="./edit.html">
@@ -291,7 +316,7 @@
                                             <i class="fa-solid fa-pen"></i>
                                         </div>
                                     </a>
-                                    <a href="#">
+                                    <a onclick="myFunction()">
                                         <div class="icon-trash">
                                             <i class="fa-solid fa-trash"></i>
                                         </div>
@@ -335,7 +360,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <div class="close">
-                    <div id="right">
+                    <div id="on-right">
                         &times;
                     </div>
                 </div>
@@ -348,18 +373,24 @@
                 </div>
             </div>
         </div>
+
     </div>
     <script>
         var modal = document.getElementById("myModal");
-        var btn = document.getElementById("myBtn");
-        var span = document.getElementById("right");
+        // var btn = document.getElementById("myBtn");
+        // var btnt = document.getElementById("myBtnt");
+        var span = document.getElementById("on-right");
         var buttonno = document.getElementsByClassName("button-no")[0];
         var buttonyes = document.getElementsByClassName("button-yes")[0];
         var icontrash = document.getElementsByClassName("icon-trash")[0];
-        btn.onclick = function () {
-            console.log("");
-            modal.style.display = "block";
-        }
+        // btn.onclick = function () {
+        //     console.log("");
+        //     modal.style.display = "block";
+        // }
+        // btnt.onclick = function () {
+        //     console.log("");
+        //     modal.style.display = "block";
+        // }
         span.onclick = function () {
             modal.style.display = "none";
         }
@@ -377,7 +408,11 @@
                 modal.style.display = "none";
             }
         }
-        
+    function myFunction() {
+        modal.style.display = "block";
+    }
+
     </script>
 </body>
+
 </html>

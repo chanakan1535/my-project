@@ -917,33 +917,36 @@ padding: 0px 16px;
 .button-no{
     width: 50px;
     height: 36px;
-    border-radius: 6px;
-    margin-right: 64px;
     color: #000;
+    cursor: pointer;
     font-size: 14px;
     font-weight: 800;
+    border-radius: 6px;
+    margin-right: 64px;
     font-family: sarabun;
-    background-color: rgba(205, 198, 198, 0.56);
     border: 0px solid !important;
+    background-color: rgba(205, 198, 198, 0.56);
 }
 .button-yes {
     width: 50px;
     height: 36px;
-    border-radius: 6px;
     color: #FFF;
+    cursor: pointer;
     font-size: 14px;
     font-weight: 800;
+    border-radius: 6px;
     font-family: sarabun;
-    border: 0px solid !important;
     background-color: #5BB6F9;
+    border: 0px solid !important;
 }
 .close{
     display: flex;
     justify-content: flex-end;
     padding-right: 16px;
 }
-.close .right{
+#on-right{
     font-size: 24px;
+    cursor: pointer;
     color: #0000009c;
 }
 /* ข้อมูลของช่อง input ที่มา icon dropdown */
